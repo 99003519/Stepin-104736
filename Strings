@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+
+    char str[]={"Hello_I_am_Vennela"};
+    puts(str);
+    char *brokenstr=strtok(str,"_");
+    while(brokenstr!=NULL)
+    {
+        puts(brokenstr);
+        brokenstr=strtok(NULL,"_");
+    }
+    return 0;
+}
