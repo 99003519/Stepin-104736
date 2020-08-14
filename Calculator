@@ -1,0 +1,21 @@
+#include<stdio.h>
+int sum(int a, int b)
+{
+    return a+b;
+}
+int sub(int a,int b)
+{
+    return a-b;
+}
+int main()
+{
+    int x,y,add,diff;
+    int (*fun)(int ,int )=NULL;
+    printf("Enter two number:");
+    scanf("%d %d",&x,&y);
+    fun=sum;
+    add=fun(x,y);
+    fun=sub;
+    diff=fun(x,y);
+    printf("addition:%d subtration:%d",add,diff);
+}
